@@ -12,13 +12,6 @@ export const SecondComponent = () => {
       "Otro libro"
     ];
   
-
-    const listBooks = [];
-    books.forEach((book, index) => {
-      listBooks.push(<li key={ index }> {book} </li>);
-    });
-
-
     return (
       <>
         <h1>SecondComponent</h1>
@@ -30,9 +23,6 @@ export const SecondComponent = () => {
               })
             }
           </ul>
-          <ul>
-          { listBooks }
-        </ul>
         </div>
       </>
     )
