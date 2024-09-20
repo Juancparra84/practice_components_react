@@ -38,7 +38,7 @@ export const MyFirstComponent = () => {
           <p>Celular: {student.mobile} </p>
           <p>Linkedin: <a href={student.linkedin_profile}>{student.linkedin_profile} </a> </p>
         </div>
-        <div> 
+        <div className="container"> 
           <h1>Objeto Completo</h1>
           <pre>{JSON.stringify(student)} </pre>
         </div>
