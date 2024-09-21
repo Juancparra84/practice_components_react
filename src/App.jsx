@@ -4,6 +4,7 @@ import './App.css';
 //* import { ThirdComponent } from './components/ThirdComponent';
 import { Child } from './components/Child';
 import { useState } from 'react';
+import { FourthComponent } from './components/FourthComponent';
 
 function App() {
 
@@ -13,6 +14,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Fundamentos de React</h1>
+        <hr className='white-hr'/>
+        < FourthComponent />
         <hr className='white-hr'/>
      {/*   <MyFirstComponent />
         <hr className='white-hr'/>
@@ -30,8 +33,6 @@ function App() {
            />
         <hr className='white-hr'/>
 
-
-        <hr className='white-hr'/>
       </header>
     </div>
   )
