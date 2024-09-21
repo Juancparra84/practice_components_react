@@ -18,6 +18,18 @@ export const FourthComponent = () => {
     alert ("Haz SALIDO de la caja");
   }
 
+  const handleMouse= (e, action) => {
+    alert(`Haz ${action} la caja`)
+  };
+
+  const handleInsideInput = (e) => {
+    console.log("Estas dentro del input, escribe tu nombre!!");  };
+
+  const handleOutsideInput = (e) =>{
+    console.log("Estás fuera del input, Adiós!!")
+  };
+
+
   return (
     <div>
         <h1> FourthComponent </h1>
@@ -43,11 +55,25 @@ export const FourthComponent = () => {
             haz doble click!
          </button>
 
-        <div id="box1"
+        <div id="box1" className="mt-4"
          onMouseEnter={ e => handleMouseEnter(e)}
          onMouseLeave={ e => handleMouseLeave(e)}
          >
             <p>Pasa el mouse por encima!!</p>
+        </div>
+
+        <div id="box2" className="mt-4"
+         onMouseEnter={ e => handleMouse(e, "Entrado a")}
+         onMouseLeave={ e => handleMouse(e, "Salido de")}
+         >
+            <p>Pasa el mouse por encima!!</p>
+        </div>
+
+        <div className="mt-4">
+          <input type="text"
+           onFocus={ e => handleInsideInput (e)}
+           onBlur={ e => handleOutsideInput(e)}
+          />
         </div>
     </div>
   )
